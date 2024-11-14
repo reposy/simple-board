@@ -1,15 +1,30 @@
 package springbootkotlin.simpleboard
 
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/board")
 class SimpleBoardController {
 
     @GetMapping
-    fun boardIndex(): String {
+    fun selectBoard(id: Long): String {
         return "Hi, I'm Simple Board Application"
     }
+
+    @PostMapping
+    fun insertBoard(): String {
+        return ""
+    }
+
+    @PatchMapping
+    fun updateBoard(): String {
+        return ""
+    }
+
+    @PutMapping
+    fun updateBoard(id: Long): String {
+        return ""
+    }
+
+
 }
